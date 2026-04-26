@@ -1,0 +1,14 @@
+{
+	"accountLinkingRequest": {
+		"skipOnEnablement": false,
+		"type": "AUTH_CODE",
+		"authorizationUrl": "{{AUTHORIZE_URL}}",
+		"accessTokenUrl": "{{TOKEN_URL}}",
+		"accessTokenScheme": "REQUEST_BODY_CREDENTIALS",
+		"clientId": "{{OAUTH_CLIENT_ID}}",
+		"clientSecret": "{{OAUTH_CLIENT_SECRET}}",
+		"scopes": [],
+		"domains": [],
+		"defaultTokenExpirationInSeconds": 31536000
+	}
+}

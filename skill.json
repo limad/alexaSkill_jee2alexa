@@ -1,0 +1,83 @@
+{
+	"manifest": {
+		"manifestVersion": "1.0",
+		"apis": {
+			"smartHome": {
+				"endpoint": {
+					"uri": "{{LAMBDA_ARN}}"
+				},
+				"protocolVersion": "3"
+			}
+		},
+		"events": {
+			"endpoint": {
+				"uri": "{{LAMBDA_ARN}}"
+			},
+			"subscriptions": [
+				{ "eventName": "Alexa.SmartHome" }
+			],
+			"regions": {
+				"EU": {
+					"endpoint": { "uri": "{{LAMBDA_ARN}}" }
+				},
+				"NA": {
+					"endpoint": { "uri": "{{LAMBDA_ARN}}" }
+				}
+			}
+		},
+		"permissions": [
+			{ "name": "alexa::async_event:write" }
+		],
+		"publishingInformation": {
+			"automaticClonedLocale": {
+				"locales": [{ "source": "fr-FR" }]
+			},
+			"locales": {
+				"fr-FR": {
+					"description": "Contrôle vocal SmartHome de votre installation Jeedom via Alexa.",
+					"examplePhrases": [
+						"Alexa, allume la lumière du salon",
+						"Alexa, mets le chauffage à 20 degrés",
+						"Alexa, ferme la porte du garage"
+					],
+					"keywords": ["jeedom", "smarthome", "domotique"],
+					"name": "AlexaPremium SmartHome",
+					"summary": "Skill SmartHome qui expose les équipements Jeedom à Alexa."
+				},
+				"en-US": {
+					"description": "Voice control of your Jeedom devices via Alexa SmartHome.",
+					"examplePhrases": [
+						"Alexa, turn on the living room light",
+						"Alexa, set the heating to 20 degrees",
+						"Alexa, lock the front door"
+					],
+					"keywords": ["jeedom", "smarthome", "home automation"],
+					"name": "AlexaPremium SmartHome",
+					"summary": "SmartHome skill exposing Jeedom devices to Alexa."
+				}
+			},
+			"isAvailableWorldwide": false,
+			"distributionCountries": ["FR", "BE", "CA", "GB", "US"],
+			"category": "SMART_HOME",
+			"distributionMode": "PUBLIC",
+			"testingInstructions": "Skill auto-déployé par chaque utilisateur Jeedom avec son propre endpoint."
+		},
+		"privacyAndCompliance": {
+			"allowsPurchases": false,
+			"isExportCompliant": true,
+			"isChildDirected": false,
+			"usesPersonalInfo": false,
+			"containsAds": false,
+			"locales": {
+				"fr-FR": {
+					"privacyPolicyUrl": "{{PRIVACY_URL}}",
+					"termsOfUseUrl": "{{TOS_URL}}"
+				},
+				"en-US": {
+					"privacyPolicyUrl": "{{PRIVACY_URL}}",
+					"termsOfUseUrl": "{{TOS_URL}}"
+				}
+			}
+		}
+	}
+}
