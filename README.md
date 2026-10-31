@@ -1,4 +1,5 @@
-# premiumSmartHome_skill
+# alexaSkill jee2alexa
+
 
 Skill **Alexa SmartHome** Alexa-hosted pour le plugin Jeedom [`alexaapiv2`](https://github.com/limad/jeedom_alexaPremium).
 
